@@ -1,9 +1,23 @@
-# AI Experiments
+# Blue vs Red AI Pong
 
-### This is my messing-around-with-AI repository: a place to throw in small experiments, prototypes, and learning projects while I explore how AI works.
+A 2D automatic Pong match built with Python and Raylib. Blue and Red use different rule-based strategies; the `bot.py` module is the seam for future scikit-learn lessons.
 
-### The projects here may use different tools and approaches, from classical machine learning to game-playing bots and other ideas I want to try. They are primarily for learning, experimentation, and having fun—not polished products or one big application.
+## Run with uv
 
-### I’ll add notes and instructions alongside experiments when useful. Each project may have its own setup and dependencies, so check its folder for details before running it.
+```sh
+uv sync
+uv run python main.py
+```
 
-### Expect things to change as I learn: experiments may be incomplete, get reorganized, or be replaced by a better attempt. The point is to try ideas, see what happens, and learn from the results.
+The first paddle to 7 points wins. **Space** pauses/resumes, **R** restarts, and **Esc** quits.
+
+## Modules
+
+- `main.py` — window loop and input.
+- `settings.py` — dimensions, colors, speed and randomness settings.
+- `entities.py` — ball and paddle data.
+- `bot.py` — Blue predicts a wall-reflected intercept; Red reacts to a delayed, noisy position.
+- `game.py` — motion, randomized collisions, scoring and match state.
+- `renderer.py` — Raylib drawing.
+
+The ball serves faster than a standard Pong ball, speeds up after paddle contact, and receives small random changes at wall and paddle bounces. The current project only depends on Raylib; scikit-learn can be introduced when replacing either bot.
