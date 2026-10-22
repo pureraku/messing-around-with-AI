@@ -1,7 +1,20 @@
-# AI Playground
+# RPS-AI
 
-A home for small AI experiments I build while learning. Expect prototypes, odd ideas, and unfinished projects.
+A small terminal rock-paper-scissors experiment. The AI starts with random moves, tracks your move history, then tries to counter your most frequent move.
 
-Each experiment gets its own Git branch. Check that branch’s notes for setup and run instructions.
+## Run
 
-Try things, see what happens, learn something. (ง'̀-'́)ง
+```sh
+uv run python main.py
+```
+
+Enter `r`, `p`, or `s` each round. Enter `q` to quit.
+
+## Modules
+
+- `rps.py` — moves and round rules.
+- `ai.py` — adaptive opponent model and move selection.
+- `cli.py` — terminal input and score display.
+- `main.py` — connects the game loop.
+
+This simple frequency-based strategy is an experiment, not a mind reader: random or changing moves can throw it off.

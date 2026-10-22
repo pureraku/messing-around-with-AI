@@ -1,0 +1,9 @@
+[project]
+name = "rps-ai"
+version = "0.1.0"
+description = "A small adaptive rock-paper-scissors learning experiment"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.uv]
+package = false
