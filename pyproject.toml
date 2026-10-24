@@ -1,0 +1,11 @@
+[project]
+name = "aitest"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas>=3.0.6",
+    "raylib>=6.0.1.0",
+    "scikit-learn>=1.9.1",
+]
